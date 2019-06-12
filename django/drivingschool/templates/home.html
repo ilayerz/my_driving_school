@@ -10,7 +10,9 @@
 
 {%for group in user.groups.all%}
 {%if group.name == "Secretary" %}
-<h1>SECRETAIRE</h1>
+{% include 'secretary/index.html'%}
+
+
 
 {%endif%}
 <p>{{group.name}}</p>
