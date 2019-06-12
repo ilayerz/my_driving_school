@@ -10,3 +10,5 @@ def home(request):
             return redirect('secretary')
         if group.name == "Admin":
             return redirect('/admin')
+        if group.name == "Instructor":
+            return redirect('instructor')
