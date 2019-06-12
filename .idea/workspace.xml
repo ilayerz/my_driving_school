@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="17e2061d-51c4-4a8b-8a88-ad5820aa6dec" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/django/drivingschool/drivingschool/login.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/django/drivingschool/templates/instructor/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/django/drivingschool/templates/secretary/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/django/drivingschool/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/django/drivingschool/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/django/drivingschool/drivingschool/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/django/drivingschool/drivingschool/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/django/drivingschool/drivingschool/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/django/drivingschool/drivingschool/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/django/drivingschool/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/django/drivingschool/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/django/drivingschool/drivingschool/login.py" beforeDir="false" afterPath="$PROJECT_DIR$/django/drivingschool/drivingschool/login.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,8 +27,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/django/drivingschool/drivingschool/login.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="33" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
+            <state relative-caret-position="187">
+              <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
               <folding>
                 <element signature="e#0#44#0" expanded="true" />
               </folding>
@@ -229,7 +222,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10037000" />
+    <option name="totallyTimeSpent" value="10064000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -406,8 +399,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/django/drivingschool/drivingschool/login.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="33" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
+        <state relative-caret-position="187">
+          <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
           <folding>
             <element signature="e#0#44#0" expanded="true" />
           </folding>
