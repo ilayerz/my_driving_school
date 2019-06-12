@@ -5,6 +5,17 @@
 {% block content %}
 {% if user.is_authenticated %}
   Hi {{ user.username }}!
+
+
+
+{%for group in user.groups.all%}
+{%if group.name == "Secretary" %}
+<h1>SECRETAIRE</h1>
+
+{%endif%}
+<p>{{group.name}}</p>
+{%endfor%}
+
   <p><a href="{% url 'logout' %}">logout</a></p>
 {% else %}
   <p>You are not logged in</p>
