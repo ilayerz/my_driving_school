@@ -7,8 +7,6 @@ from django.shortcuts import redirect
 def home(request):
     for group in request.user.groups.all():
         if group.name == "Secretary":
-            return redirect('home')
+            return redirect('secretary')
         if group.name == "Admin":
             return redirect('/admin')
-
-
