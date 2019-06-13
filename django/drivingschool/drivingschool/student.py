@@ -19,7 +19,7 @@ def renderForm(request, id):
 			planning.lieu = form.data['lieu']
 			planning.date = form.data['date']
 			planning.save()
-			return redirect('studentplanning')
+			return redirect('instructor')
 	else:
 		form = PlanningForm()
 	return render(request,"student/form.html", { "form" : form, "studentId": id })
