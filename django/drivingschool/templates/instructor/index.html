@@ -12,6 +12,12 @@
   <a href="/instructor/student/{{user.id}}">{{user.username}}</a>
 {%endfor%}
 </div>
+<div>
+  <h3>Liste des rdv</h3>
+  {%for planning in planninglist %}
+    <p>{{planning.date}} à {{planning.lieu}}</p>
+  {%endfor%}
+</div>
 
   <p><a href="{% url 'logout' %}">logout</a></p>
 {% endblock %}
