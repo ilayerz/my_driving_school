@@ -25,5 +25,7 @@ urlpatterns = [
     path('', TemplateView.as_view(template_name='home.html'), name='home'),
     path('secretary/', secretary.home, name="secretary"),
     path('secretary/student/<int:id>', secretary.student, name="studentfromsecretary"),
-    path('test/', login.home)
+    path('test/', login.home),
+    path('adduser/', secretary.addUser, name="adduser"),
+    path('deleteuser/', secretary.deleteUser, name="deleteuser")
 ]
