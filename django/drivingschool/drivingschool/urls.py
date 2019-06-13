@@ -28,4 +28,6 @@ urlpatterns = [
     path('test/', login.home),
     path('instructor/', instructor.home, name="instructor"),
     path('instructor/student/<int:id>', instructor.student, name="studentfrominstructor"),
+    path('adduser/', secretary.addUser, name="adduser"),
+    path('deleteuser/', secretary.deleteUser, name="deleteuser")
 ]

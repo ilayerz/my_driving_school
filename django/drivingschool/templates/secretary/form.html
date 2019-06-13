@@ -1,0 +1,9 @@
+<form  method='POST' action='/adduser/'>
+  {% csrf_token %}
+  {{form}}
+  <select class="" name="role">
+    <option value="Instructor">Instructor</option>
+    <option value="Student">Student</option>
+  </select>
+  <input type="submit" name="" value="Add">
+</form>
