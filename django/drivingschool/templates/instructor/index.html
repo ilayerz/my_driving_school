@@ -1,1 +1,18 @@
-<p>oui l'instructeur</p>
+{% extends 'base.html'%}
+
+
+
+{% block title %}Instructeur{% endblock %}
+
+{% block content %}
+
+<div>
+  <h3>Liste des élèves</h3>
+{% for user in studentslist %}
+  <a href="/instructor/student/{{user.id}}">{{user.username}}</a>
+{%endfor%}
+</div>
+
+  <p><a href="{% url 'logout' %}">logout</a></p>
+{% endblock %}
+
