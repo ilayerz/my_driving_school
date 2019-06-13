@@ -8,6 +8,8 @@ def home(request):
     for group in request.user.groups.all():
         if group.name == "Secretary":
             return redirect('secretary')
+        if group.name == "Student":
+            return redirect('studentplanning')
         if group.name == "Admin":
             return redirect('/admin')
         if group.name == "Instructor":

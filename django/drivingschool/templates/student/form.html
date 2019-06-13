@@ -1,0 +1,6 @@
+<form method="POST">
+	{% csrf_token %}
+{{ form }}
+<input type="hidden" name="id_student" value="{{studentId}}">
+<button type="submit">Envoyer (oui)</button>
+</form>
