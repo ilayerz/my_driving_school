@@ -8,13 +8,13 @@ def getPlanning(request):
 	studentPlannings = Planning.objects.filter(id_instructor=request.user.id)
 	return render(request,"student/planning.html", { "plannings" : studentPlannings })
 
-def renderForm(request):
+def renderForm(request, id):
 	
 	if request.method == "POST":
 		form = PlanningForm(request.POST)
 		if form.is_valid():
 			planning = Planning()
-			planning.id_student = 1
+			planning.id_student = form.data['id_student']
 			planning.id_instructor = request.user.id
 			planning.lieu = form.data['lieu']
 			planning.date = form.data['date']
@@ -22,7 +22,7 @@ def renderForm(request):
 			return redirect('studentplanning')
 	else:
 		form = PlanningForm()
-	return render(request,"student/form.html", { "form" : form })
+	return render(request,"student/form.html", { "form" : form, "studentId": id })
 
 	
 
