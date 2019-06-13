@@ -5,7 +5,7 @@ from drivingapp.forms import PlanningForm
 from django.shortcuts import redirect
 
 def getPlanning(request):
-	studentPlannings = Planning.objects.filter(id_instructor=request.user.id)
+	studentPlannings = Planning.objects.filter(id_student=request.user.id)
 	return render(request,"student/planning.html", { "plannings" : studentPlannings })
 
 def renderForm(request, id):
