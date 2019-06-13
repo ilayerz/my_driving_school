@@ -16,7 +16,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 from django.views.generic.base import TemplateView
-from drivingschool import login, secretary, instructor
+
+from drivingschool import login, secretary, instructor, student
 
 urlpatterns = [
     path('driving/', include('drivingapp.urls')),
@@ -29,5 +30,7 @@ urlpatterns = [
     path('instructor/', instructor.home, name="instructor"),
     path('instructor/student/<int:id>', instructor.student, name="studentfrominstructor"),
     path('adduser/', secretary.addUser, name="adduser"),
-    path('deleteuser/', secretary.deleteUser, name="deleteuser")
+    path('deleteuser/', secretary.deleteUser, name="deleteuser"),
+    path('student/form/', student.renderForm, name="studentform"),
+    path('student/planning/', student.getPlanning, name="studentplanning")
 ]

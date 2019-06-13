@@ -8,7 +8,7 @@ from django.contrib.auth.models import Group
 def home(request):
     instructors = User.objects.filter(groups__name='Instructors')
     students = User.objects.filter(groups__name='Student')
-    return render(request, 'secretary/index.html', { 'instructorslist': instructors, 'studentslist': students})
+    return render(request, 'secretary/index.html', {'instructorslist': instructors, 'studentslist': students})
 
 def student(request, id):
     student = User.objects.filter(groups__name='Student').get(id=id)
