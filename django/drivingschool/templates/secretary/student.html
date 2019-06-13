@@ -1,3 +1,7 @@
 Fiche étudiant
 <p>username: {{student.username}}</p>
 <p>email: {{student.email}}</p>
+<form class="" action="/deleteuser/" method="post">
+    {% csrf_token %}
+    <button type="submit" name="username" value={{student.username}}>delete</button>
+</form>
