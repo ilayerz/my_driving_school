@@ -1,9 +1,13 @@
-<form  method='POST' action='/adduser/'>
+{% extends 'base.html'%}
+{% block content %}
+<h1 class="p-5 text-light text-center bg-primary">My driving school</h1>
+<form class="text-center mt-5 mx-auto d-flex flex-column w-25" method='POST' action='/adduser/'>
   {% csrf_token %}
   {{form}}
-  <select class="" name="role">
+  <select class="form-control mt-1 mb-1" name="role">
     <option value="Instructor">Instructor</option>
     <option value="Student">Student</option>
   </select>
-  <input type="submit" name="" value="Add">
+  <input class="btn btn-primary" type="submit" name="" value="Add">
 </form>
+{% endblock %}

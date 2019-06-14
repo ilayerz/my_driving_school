@@ -5,13 +5,13 @@
 {% block title %}Secrétaire{% endblock %}
 
 {% block content %}
-
-<div>
-  <h3>Liste des élèves</h3>
+<h1 class="p-5 text-light text-center bg-primary">My driving school</h1>
+<div class="p-5 text-center">
+  <a class="btn btn-info" href="{% url 'logout' %}">logout</a>
+  <h3 class="m-3">Liste des élèves</h3>
 {% for user in studentslist %}
-  <a href="/secretary/student/{{user.id}}">{{user.username}}</a>
+  <p class="m-3"><a href="/secretary/student/{{user.id}}">{{user.username}}</a></p>
 {%endfor%}
+  <a class="btn btn-primary" href="/adduser">add user</a>
 </div>
-  <a href="/adduser">add user</a>
-  <p><a href="{% url 'logout' %}">logout</a></p>
 {% endblock %}
