@@ -6,6 +6,7 @@
 	{% for planning in plannings %}
   <p class="m-3">{{planning.date}} à {{planning.lieu}} {% for instructor in instructors %} {% if instructor.id == planning.id_instructor %} avec l'instructeur <b>{{instructor.username}}</b> {%endif%} {%endfor%}</p>
 
+
 	{% endfor %}
 </div>
 {% endblock %}	

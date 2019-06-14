@@ -32,5 +32,6 @@ urlpatterns = [
     path('adduser/', secretary.addUser, name="adduser"),
     path('deleteuser/', secretary.deleteUser, name="deleteuser"),
     path('instructor/form/<int:id>', student.renderForm, name="studentform"),
-    path('student/planning/', student.getPlanning, name="studentplanning")
+    path('student/planning/', student.getPlanning, name="studentplanning"),
+    path('instructor/planning/delete/<int:id>', instructor.delete, name="instructordeleteplanning")
 ]
