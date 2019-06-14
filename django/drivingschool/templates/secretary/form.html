@@ -1,6 +1,5 @@
 {% extends 'base.html'%}
 {% block content %}
-<h1 class="p-5 text-light text-center bg-primary">My driving school</h1>
 <form class="text-center mt-5 mx-auto d-flex flex-column w-25" method='POST' action='/adduser/'>
   {% csrf_token %}
   {{form}}

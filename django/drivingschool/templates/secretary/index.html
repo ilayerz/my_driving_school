@@ -5,7 +5,6 @@
 {% block title %}Secrétaire{% endblock %}
 
 {% block content %}
-<h1 class="p-5 text-light text-center bg-primary">My driving school</h1>
 <div class="p-5 text-center">
   <a class="btn btn-info" href="{% url 'logout' %}">logout</a>
   <h3 class="m-3">Liste des élèves</h3>
@@ -17,7 +16,7 @@
 <div class="p-5 text-center">
   <h3 class="m-3">Liste des instructeurs</h3>
 {% for user in instructorslist %}
-  <p class="m-3">{{user.username}} <a href="/instructor/delete/{{user.id}}">Delete</a></p>
+  <p class="m-3">{{user.username}} <a class="btn btn-danger btn-sm" href="/instructor/delete/{{user.id}}">Delete</a></p>
 {%endfor%}
   <a class="btn btn-primary" href="/adduser">add user</a>
 </div>
