@@ -5,20 +5,18 @@
 {% block title %}Instructeur{% endblock %}
 
 {% block content %}
-
-<div>
-  <h3>Liste des élèves</h3>
-{% for user in studentslist %}
-  <a href="/instructor/student/{{user.id}}">{{user.username}}</a>
-{%endfor%}
-</div>
-<div>
-  <h3>Liste des rdv</h3>
-  {%for planning in planninglist %}
-    <p>{{planning.date}} à {{planning.lieu}}</p>
+  <h1 class="p-5 text-light text-center bg-primary">My driving school</h1>
+  <div class="p-3 text-center">
+    <a class="btn btn-info" href="{% url 'logout' %}">logout</a>
+    <h3 class="m-3">Liste des élèves</h3>
+  {% for user in studentslist %}
+    <p class="m-3"><a href="/instructor/student/{{user.id}}">{{user.username}}</a></p>
   {%endfor%}
-</div>
-
-  <p><a href="{% url 'logout' %}">logout</a></p>
+  </div>
+  <div class="p-3 text-center">
+    <h3 class="m-3">Liste des rdv</h3>
+    {%for planning in planninglist %}
+      <p class="m-3">{{planning.date}} à {{planning.lieu}}</p>
+    {%endfor%}
+  </div>
 {% endblock %}
-

@@ -1,5 +1,11 @@
-<p>Rendez-vous de l'eleve {{studentusername}} </p>
-{% for planning in plannings %}
+{% extends 'base.html'%}
+{% block content %}
+<h1 class="p-5 text-light text-center bg-primary">My driving school</h1>
+<div class="p-5 text-center">
+	<p>Rendez-vous de l'eleve {{studentusername}} </p>
+	{% for planning in plannings %}
 	<p>Le {{planning.date}} à {{planning.lieu}}</p>
 
-{% endfor %}
+	{% endfor %}
+</div>
+{% endblock %}	

@@ -1,6 +1,10 @@
-<form method="POST">
-	{% csrf_token %}
-{{ form }}
-<input type="hidden" name="id_student" value="{{studentId}}">
-<button type="submit">Envoyer (oui)</button>
+{% extends 'base.html'%}
+{% block content %}
+<h1 class="p-5 text-light text-center bg-primary">My driving school</h1>
+<form class="text-center mt-5 mx-auto d-flex flex-column w-25" method='POST'>
+  {% csrf_token %}
+  {{form}}
+	<input type="hidden" name="id_student" value="{{studentId}}">
+	<button class="btn btn-primary mt-3" type="submit">Envoyer (oui)</button>
 </form>
+{% endblock %}

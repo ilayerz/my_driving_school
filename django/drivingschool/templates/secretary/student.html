@@ -1,7 +1,12 @@
-Fiche étudiant
-<p>username: {{student.username}}</p>
-<p>email: {{student.email}}</p>
-<form class="" action="/deleteuser/" method="post">
-    {% csrf_token %}
-    <button type="submit" name="username" value={{student.username}}>delete</button>
-</form>
+{% extends 'base.html'%}
+{% block content %}
+<h1 class="p-5 text-light text-center bg-primary">My driving school</h1>
+<div class="p-5 text-center">
+  <h3 class="m-3"> Fiche étudiant </h3>
+  <p class="text-center">username: {{student.username}}</p>
+  <form class="" action="/deleteuser/" method="post">
+      {% csrf_token %}
+      <button class="btn btn-danger" type="submit" name="username" value={{student.username}}>delete</button>
+  </form>
+</div>
+{% endblock %}

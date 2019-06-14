@@ -1,6 +1,9 @@
-Fiche étudiant
-<p>username: {{student.username}}</p>
-<p>email: {{student.email}}</p>
-<p>Nom: {{student.lastname}}</p>
-<p>Prenom: {{student.firstname}}</p>
-<a href="/instructor/form/{{student.id}}">creer un rdv</a>
+{% extends 'base.html'%}
+{% block content %}
+<h1 class="p-5 text-light text-center bg-primary">My driving school</h1>
+<div class="p-5 text-center">
+  <h3 class="m-3"> Fiche étudiant </h3>
+  <p>username: {{student.username}}</p>
+  <a class="btn btn-primary" href="/instructor/form/{{student.id}}">creer un rdv</a>
+</div>
+{% endblock %}
