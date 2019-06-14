@@ -15,8 +15,8 @@
   <div class="p-3 text-center">
     <h3 class="m-3">Liste des rdv</h3>
     {%for planning in planninglist %}
-    <p class="m-3">{{planning.date}} à {{planning.lieu}} avec l'élève <b>{% for user in studentslist %} {% if user.id == planning.id_student %} {{user.username}} {%endif%} {%endfor%}</b></p>
-     <a href="/instructor/planning/delete/{{planning.id}}"> Delete</a>
+    <p class="m-3">{{planning.date}} à {{planning.lieu}} avec l'élève <b>{% for user in studentslist %} {% if user.id == planning.id_student %} {{user.username}} {%endif%} {%endfor%}</b>   <a class="btn btn-danger btn-sm" href="/instructor/planning/delete/{{planning.id}}"> Delete</a></p>
+
 
     {%endfor%}
   </div>
