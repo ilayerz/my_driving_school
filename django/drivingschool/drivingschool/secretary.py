@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
 from django.shortcuts import redirect
 from django.contrib.auth.models import Group
+from drivingapp.models import Planning
 
 
 def home(request):
@@ -12,9 +13,11 @@ def home(request):
 
 def student(request, id):
     student = User.objects.filter(groups__name='Student').get(id=id)
+    studentPlannings = Planning.objects.filter(id_student=id)
+    instructor = User.objects.filter(groups__name='Instructor')
     if student:
 
-        return render(request, 'secretary/student.html', {'student': student})
+        return render(request, 'secretary/student.html', {'student': student, 'plannings': studentPlannings, 'instructors': instructor})
 
 def addUser(request):
     if request.method == 'POST':
