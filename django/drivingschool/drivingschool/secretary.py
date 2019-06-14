@@ -7,7 +7,7 @@ from drivingapp.models import Planning
 
 
 def home(request):
-    instructors = User.objects.filter(groups__name='Instructors')
+    instructors = User.objects.filter(groups__name='Instructor')
     students = User.objects.filter(groups__name='Student')
     return render(request, 'secretary/index.html', {'instructorslist': instructors, 'studentslist': students})
 
@@ -34,3 +34,9 @@ def addUser(request):
 def deleteUser(request):
     User.objects.filter(username=request.POST['username']).delete()
     return redirect('secretary')
+
+def delete(request, id):
+    user = User.objects.get(id=id)
+    if user:
+        user.delete()
+        return redirect('secretary')
